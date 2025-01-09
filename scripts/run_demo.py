@@ -24,6 +24,7 @@ if __name__ == "__main__":
     parser.add_argument("--est_refine_iter", type=int, default=3)
     parser.add_argument("--track_refine_iter", type=int, default=2)
     parser.add_argument("--debug", type=int, default=1)
+    parser.add_argument("--scale", type=float, default=0.001)
     parser.add_argument("--debug_dir", type=str, default=f"{code_dir}/debug")
     args = parser.parse_args()
 
@@ -31,7 +32,7 @@ if __name__ == "__main__":
     set_seed(0)
 
     mesh = trimesh.load(args.mesh_file)
-    mesh.apply_scale(0.001)
+    mesh.apply_scale(args.scale)
     debug = args.debug
     debug_dir = args.debug_dir
     os.system(
