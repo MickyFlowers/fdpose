@@ -1,0 +1,9 @@
+# instance segmentation service
+
+sensor_msgs/Image color_image    # color image of scene
+sensor_msgs/Image depth_image    # depth image of scene
+---
+bool have_objs    # flag of whether objects deteced
+sensor_msgs/Image color_image   # The color image be transfered to pose estimation
+sensor_msgs/Image depth_image   # The depth image be transfered to pose estimation
+naviai_manip_msgs/DetItem[] items    # message from segmentation, each item including label, confidence, bbox and mask

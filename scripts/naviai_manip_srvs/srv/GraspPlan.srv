@@ -1,0 +1,8 @@
+# grasp pose planning service 
+
+sensor_msgs/Image color_image   # color image of scene
+sensor_msgs/Image depth_image   # depth image of scene
+naviai_manip_msgs/ObjPose[] obj_poses   # the list of estimated poses in camera frame, including object labels and estimated poses 
+---
+string label  # label of object to be grasped
+naviai_manip_msgs/Grasp6d[] grasps   # grasp pose of dexterous hand base frame

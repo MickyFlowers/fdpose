@@ -1,0 +1,10 @@
+# robot execute service
+
+bool left_arm_enable
+bool right_arm_enable
+float32[] left_grasp_pose   # grasping pose of left tcp frame in robot base frame, order in row [T_00, T_01, T_02, T_03, T_10, T_11, ...], length=16x1
+float32[] left_place_pose   # placing pose of left tcp frame in robot base frame, order in row [T_00, T_01, T_02, T_03, T_10, T_11, ...], length=16x1
+float32[] right_grasp_pose   # grasping pose of right tcp frame in robot base frame, order in row [T_00, T_01, T_02, T_03, T_10, T_11, ...], length=16x1
+float32[] right_place_pose   # placing pose of right tcp frame in robot base frame, order in row [T_00, T_01, T_02, T_03, T_10, T_11, ...], length=16x1
+---
+bool finish    # status of robot execution true or false
